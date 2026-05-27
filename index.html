@@ -2200,6 +2200,296 @@ const translations = {
   }
 };
 
+// MBA AI & IoT - 20 disciplines
+const disciplinesAI = {
+  en: [
+    { name: "Mathematics for AI: Linear Algebra, Calculus and Probability", desc: "SVD, gradient, Bayes, MLE, information theory, distributions" },
+    { name: "Advanced Python and Data Structures for AI", desc: "NumPy, Pandas, visualization, REST APIs, Git, engineering best practices" },
+    { name: "Machine Learning Fundamentals: Supervised and Unsupervised", desc: "Regression, SVM, trees, XGBoost, clustering, PCA, cross-validation" },
+    { name: "IoT Architecture: Devices, Networks and Protocols", desc: "IoT layers, sensors, MQTT, CoAP, AWS IoT Core, digital twins, OTA" },
+    { name: "Deep Learning and Deep Neural Networks", desc: "CNN, RNN, LSTM, Transformer, PyTorch, transfer learning, GANs, GPU training" },
+    { name: "Scientific Research Methodology and Academic Writing", desc: "Systematic review, ABNT NBR 6023, research ethics, thesis project" },
+    { name: "Natural Language Processing and Large Language Models", desc: "BERT, GPT, RAG, fine-tuning LoRA/QLoRA, embeddings, pt-BR NLP, LLM evaluation" },
+    { name: "Embedded Systems and Microcontrollers for IoT", desc: "ESP32, Arduino, MicroPython, FreeRTOS, I2C/SPI, TinyML with Edge Impulse" },
+    { name: "Wireless Networks and IoT Protocols: 5G, LoRaWAN, Zigbee and NB-IoT", desc: "Range/power/bandwidth trade-offs, The Things Network, IoT network security" },
+    { name: "Edge Computing, Cloud and IoT Platforms", desc: "AWS Greengrass, Azure IoT Edge, InfluxDB, Grafana, TF Lite Micro, edge deployment" },
+    { name: "Generative AI, Large-Scale LLMs and Intelligent Agents", desc: "GPT/Claude, RLHF/DPO, advanced RAG, LangChain, LangGraph, CrewAI, AutoGen" },
+    { name: "Reinforcement Learning and Autonomous Systems", desc: "MDPs, DQN, PPO, SAC, RLHF for LLMs, Gymnasium, basic ROS 2" },
+    { name: "Cybersecurity in IoT Systems and Connected Devices", desc: "OWASP IoT Top 10, lightweight cryptography ECC/AES, PKI, firmware analysis (Binwalk/Ghidra)" },
+    { name: "Applied AI: EdTech, HealthTech and Smart Cities", desc: "AI tutors, image diagnosis, wearables, smart cities, agriculture IoT" },
+    { name: "AI Ethics, Data Privacy and LGPD", desc: "Algorithmic bias, XAI (SHAP/LIME), LGPD, EU AI Act, NIST AI RMF 1.0, auditing" },
+    { name: "MLOps: Model Deployment and Monitoring in Production", desc: "MLflow, DVC, Kubeflow, FastAPI serving, Evidently AI drift detection, CI/CD for ML" },
+    { name: "Strategic Management of AI and IoT Products", desc: "Product discovery, OKRs, roadmap, AI SaaS pricing, go-to-market in Brazil" },
+    { name: "Technology Entrepreneurship and AI/IoT Startups", desc: "Lean Startup, pitch deck, FAPESP/BNDES/VC funding, BR innovation ecosystem" },
+    { name: "Regulation, Compliance and AI/IoT Governance", desc: "EBIA 2024, EU AI Act, ISO/IEC 30141, ISO/IEC 27400, sector regulation" },
+    { name: "Thesis — Dissertation + Defense", desc: "Original applied project; systematic review; technical development; public online defense before committee" }
+  ],
+  es: [
+    { name: "Matemáticas para IA: Álgebra Lineal, Cálculo y Probabilidad", desc: "SVD, gradiente, Bayes, MLE, teoría de información, distribuciones" },
+    { name: "Python Avanzado y Estructuras de Datos para IA", desc: "NumPy, Pandas, visualización, APIs REST, Git, buenas prácticas de ingeniería" },
+    { name: "Fundamentos de Machine Learning: Supervisado y No Supervisado", desc: "Regresión, SVM, árboles, XGBoost, clustering, PCA, validación cruzada" },
+    { name: "Arquitectura IoT: Dispositivos, Redes y Protocolos", desc: "Capas IoT, sensores, MQTT, CoAP, AWS IoT Core, gemelos digitales, OTA" },
+    { name: "Deep Learning y Redes Neuronales Profundas", desc: "CNN, RNN, LSTM, Transformer, PyTorch, transfer learning, GANs, entrenamiento GPU" },
+    { name: "Metodología de Investigación Científica y Producción Académica", desc: "Revisión sistemática, ABNT NBR 6023, ética en investigación, proyecto de tesis" },
+    { name: "Procesamiento de Lenguaje Natural y Grandes Modelos de Lenguaje", desc: "BERT, GPT, RAG, fine-tuning LoRA/QLoRA, embeddings, PLN pt-BR, evaluación LLMs" },
+    { name: "Sistemas Embebidos y Microcontroladores para IoT", desc: "ESP32, Arduino, MicroPython, FreeRTOS, I2C/SPI, TinyML con Edge Impulse" },
+    { name: "Redes Inalámbricas y Protocolos IoT: 5G, LoRaWAN, Zigbee y NB-IoT", desc: "Trade-offs alcance/potencia/ancho de banda, The Things Network, seguridad en redes IoT" },
+    { name: "Edge Computing, Cloud y Plataformas IoT", desc: "AWS Greengrass, Azure IoT Edge, InfluxDB, Grafana, TF Lite Micro, despliegue en borde" },
+    { name: "IA Generativa, LLMs a Gran Escala y Agentes Inteligentes", desc: "GPT/Claude, RLHF/DPO, RAG avanzado, LangChain, LangGraph, CrewAI, AutoGen" },
+    { name: "Aprendizaje por Refuerzo y Sistemas Autónomos", desc: "MDPs, DQN, PPO, SAC, RLHF para LLMs, Gymnasium, ROS 2 básico" },
+    { name: "Ciberseguridad en Sistemas IoT y Dispositivos Conectados", desc: "OWASP IoT Top 10, criptografía ligera ECC/AES, PKI, análisis de firmware (Binwalk/Ghidra)" },
+    { name: "IA Aplicada: EdTech, HealthTech y Ciudades Inteligentes", desc: "Tutores IA, diagnóstico por imagen, wearables, smart cities, IoT agricultura" },
+    { name: "Ética en IA, Privacidad de Datos y LGPD", desc: "Sesgo algorítmico, XAI (SHAP/LIME), LGPD, EU AI Act, NIST AI RMF 1.0, auditoría" },
+    { name: "MLOps: Despliegue y Monitoreo de Modelos en Producción", desc: "MLflow, DVC, Kubeflow, FastAPI serving, Evidently AI drift detection, CI/CD para ML" },
+    { name: "Gestión Estratégica de Productos de IA e IoT", desc: "Product discovery, OKRs, roadmap, pricing SaaS de IA, go-to-market en Brasil" },
+    { name: "Emprendimiento Tecnológico y Startups de IA/IoT", desc: "Lean Startup, pitch deck, funding FAPESP/BNDES/VC, ecosistema de innovación BR" },
+    { name: "Regulación, Compliance y Gobernanza de IA e IoT", desc: "EBIA 2024, EU AI Act, ISO/IEC 30141, ISO/IEC 27400, regulación sectorial" },
+    { name: "Trabajo de Conclusión de Curso — Disertación + Defensa", desc: "Proyecto aplicado original; revisión sistemática; desarrollo técnico; defensa pública online ante tribunal" }
+  ],
+  tr: [
+    { name: "Yapay Zeka için Matematik: Lineer Cebir, Kalkülüs ve Olasılık", desc: "SVD, gradyan, Bayes, MLE, bilgi teorisi, dağılımlar" },
+    { name: "İleri Python ve YZ için Veri Yapıları", desc: "NumPy, Pandas, görselleştirme, REST API'ler, Git, mühendislik en iyi uygulamaları" },
+    { name: "Makine Öğrenimi Temelleri: Denetimli ve Denetimsiz", desc: "Regresyon, SVM, ağaçlar, XGBoost, kümeleme, PCA, çapraz doğrulama" },
+    { name: "IoT Mimarisi: Cihazlar, Ağlar ve Protokoller", desc: "IoT katmanları, sensörler, MQTT, CoAP, AWS IoT Core, dijital ikizler, OTA" },
+    { name: "Derin Öğrenme ve Derin Sinir Ağları", desc: "CNN, RNN, LSTM, Transformer, PyTorch, transfer öğrenme, GAN'lar, GPU eğitimi" },
+    { name: "Bilimsel Araştırma Metodolojisi ve Akademik Yazım", desc: "Sistematik inceleme, ABNT NBR 6023, araştırma etiği, tez projesi" },
+    { name: "Doğal Dil İşleme ve Büyük Dil Modelleri", desc: "BERT, GPT, RAG, LoRA/QLoRA fine-tuning, embeddings, pt-BR NLP, LLM değerlendirme" },
+    { name: "IoT için Gömülü Sistemler ve Mikrodenetleyiciler", desc: "ESP32, Arduino, MicroPython, FreeRTOS, I2C/SPI, Edge Impulse ile TinyML" },
+    { name: "Kablosuz Ağlar ve IoT Protokolleri: 5G, LoRaWAN, Zigbee ve NB-IoT", desc: "Menzil/güç/bant genişliği trade-off'ları, The Things Network, IoT ağ güvenliği" },
+    { name: "Edge Computing, Bulut ve IoT Platformları", desc: "AWS Greengrass, Azure IoT Edge, InfluxDB, Grafana, TF Lite Micro, edge dağıtımı" },
+    { name: "Üretken YZ, Büyük Ölçekli LLM'ler ve Akıllı Ajanlar", desc: "GPT/Claude, RLHF/DPO, gelişmiş RAG, LangChain, LangGraph, CrewAI, AutoGen" },
+    { name: "Pekiştirmeli Öğrenme ve Otonom Sistemler", desc: "MDP'ler, DQN, PPO, SAC, LLM'ler için RLHF, Gymnasium, temel ROS 2" },
+    { name: "IoT Sistemleri ve Bağlı Cihazlarda Siber Güvenlik", desc: "OWASP IoT Top 10, hafif kriptografi ECC/AES, PKI, firmware analizi (Binwalk/Ghidra)" },
+    { name: "Uygulamalı YZ: EdTech, HealthTech ve Akıllı Şehirler", desc: "YZ öğretmenler, görüntü tanı, giyilebilir cihazlar, akıllı şehirler, tarım IoT" },
+    { name: "YZ Etiği, Veri Gizliliği ve LGPD", desc: "Algoritmik önyargı, XAI (SHAP/LIME), LGPD, EU AI Act, NIST AI RMF 1.0, denetim" },
+    { name: "MLOps: Üretimde Model Dağıtımı ve İzleme", desc: "MLflow, DVC, Kubeflow, FastAPI serving, Evidently AI drift detection, ML için CI/CD" },
+    { name: "YZ ve IoT Ürünlerinin Stratejik Yönetimi", desc: "Ürün keşfi, OKR'ler, yol haritası, YZ SaaS fiyatlandırma, Brezilya'da pazar girişi" },
+    { name: "Teknoloji Girişimciliği ve YZ/IoT Startupları", desc: "Lean Startup, pitch deck, FAPESP/BNDES/VC finansmanı, BR inovasyon ekosistemi" },
+    { name: "Düzenleme, Uyumluluk ve YZ/IoT Yönetişimi", desc: "EBIA 2024, EU AI Act, ISO/IEC 30141, ISO/IEC 27400, sektörel düzenleme" },
+    { name: "Bitirme Çalışması — Tez + Savunma", desc: "Özgün uygulamalı proje; sistematik inceleme; teknik geliştirme; jüri önünde halka açık online savunma" }
+  ]
+};
+
+// MBA DevSecOps - 20 disciplines
+const disciplinesDSO = {
+  en: [
+    { name: "DevOps Fundamentals, Agile Culture, Lean and Secure SDLC", desc: "CAMS, shift-left security, Scrum/Kanban, DORA metrics, CMU SEI PIM overview" },
+    { name: "Advanced Version Control with Git, GitFlow and Branching Strategies", desc: "Git internals, Trunk-Based Dev, GitOps, security hooks, Gitleaks, GPG signing" },
+    { name: "Security Fundamentals: CIA Triad, OWASP Top 10 and Vulnerability Analysis", desc: "CVE/CVSS, TLS 1.3 cryptography, HashiCorp Vault, basic pentest, threat intel" },
+    { name: "Linux, Shell Scripting and Server Infrastructure", desc: "Linux administration, advanced Bash, TCP/IP, CIS Benchmarks hardening, secure SSH" },
+    { name: "Secure Programming: Best Practices and Security Code Review", desc: "OWASP Secure Coding, SQLi/XSS/CSRF prevention, Semgrep, Bandit, basic SCA" },
+    { name: "Secure CI/CD Pipelines: Jenkins, GitHub Actions and GitLab CI", desc: "Security gates, OIDC tokens, ArgoCD GitOps, blue-green/canary deploys, secrets" },
+    { name: "SAST, DAST and SCA: Automated Security Testing in Pipelines", desc: "SonarQube, Semgrep, CodeQL, OWASP ZAP, Snyk, Trivy, Nuclei, OWASP API Top 10" },
+    { name: "Containerization with Docker and Secure Orchestration with Kubernetes", desc: "Multi-stage builds, non-root, Trivy, OPA/Gatekeeper, Falco runtime, Cosign, service mesh" },
+    { name: "Secure Infrastructure as Code: Terraform and Ansible", desc: "IaC scanning (Checkov/tfsec), Sentinel policy-as-code, drift detection, hardening roles" },
+    { name: "Cloud Computing and Cloud Security: AWS, Azure and GCP", desc: "IAM least privilege, VPC, GuardDuty, Security Hub, Zero Trust Architecture, CSPM (Wiz)" },
+    { name: "Threat Modeling, MITRE ATT&CK and OWASP Top 10", desc: "STRIDE, PASTA, attack trees, ATT&CK Enterprise/Cloud, Cyber Kill Chain, CTI" },
+    { name: "Kubernetes Security, Containers and Software Supply Chain", desc: "CIS Benchmark, SLSA Framework, SBOM (Syft/Grype), SolarWinds/Log4Shell/XZ cases" },
+    { name: "Monitoring, Observability and SIEM", desc: "ELK Stack, Prometheus, Grafana, OpenTelemetry, Elastic SIEM, SOC, correlation rules" },
+    { name: "Incident Response, Digital Forensics and Business Continuity", desc: "IR cycle, SOAR (Splunk SOAR), Linux/Cloud forensics (Volatility/CloudTrail), BCP/DRP" },
+    { name: "DevSecOps with AI: Intelligent Security Automation", desc: "AI-powered SAST (Copilot/CodeGuru), UEBA with ML, AI/LLM pipeline security" },
+    { name: "Compliance: LGPD, ISO 27001, NIST CSF 2.0 and SOC 2", desc: "LGPD/ANPD, ISO 27001:2022 ISMS, NIST Govern-Identify-Protect-Detect-Respond, PCI-DSS 4.0" },
+    { name: "Security Management and Technical Leadership (CISO Mindset)", desc: "Security champions, DevSecOps KPIs, security budget for executive board" },
+    { name: "IT Governance: COBIT 2019, ITIL 4 and Risk Management", desc: "COBIT 2019 control objectives, ITIL 4 value chain, ISO 31000, GRC, internal audit" },
+    { name: "Cybersecurity Entrepreneurship and Managed Security Services", desc: "Brazilian cybersecurity market, MSSP, security SaaS, accelerators" },
+    { name: "Thesis — Dissertation + Defense", desc: "Real DevSecOps implementation or measurable pipeline improvement; public online defense with technical demonstration" }
+  ],
+  es: [
+    { name: "Fundamentos de DevOps, Cultura Ágil, Lean y SDLC Seguro", desc: "CAMS, shift-left de seguridad, Scrum/Kanban, métricas DORA, overview CMU SEI PIM" },
+    { name: "Control de Versiones Avanzado con Git, GitFlow y Estrategias de Branching", desc: "Git internals, Trunk-Based Dev, GitOps, hooks de seguridad, Gitleaks, GPG signing" },
+    { name: "Fundamentos de Seguridad: Triada CIA, OWASP Top 10 y Análisis de Vulnerabilidades", desc: "CVE/CVSS, criptografía TLS 1.3, HashiCorp Vault, pentest básico, threat intel" },
+    { name: "Linux, Shell Scripting e Infraestructura de Servidores", desc: "Administración Linux, Bash avanzado, TCP/IP, hardening CIS Benchmarks, SSH seguro" },
+    { name: "Programación Segura: Buenas Prácticas y Revisión de Código de Seguridad", desc: "OWASP Secure Coding, prevención SQLi/XSS/CSRF, Semgrep, Bandit, SCA básico" },
+    { name: "Pipelines CI/CD Seguros: Jenkins, GitHub Actions y GitLab CI", desc: "Security gates, tokens OIDC, ArgoCD GitOps, deploys blue-green/canary, secrets" },
+    { name: "SAST, DAST y SCA: Tests de Seguridad Automatizados en Pipelines", desc: "SonarQube, Semgrep, CodeQL, OWASP ZAP, Snyk, Trivy, Nuclei, OWASP API Top 10" },
+    { name: "Containerización con Docker y Orquestación Segura con Kubernetes", desc: "Multi-stage builds, non-root, Trivy, OPA/Gatekeeper, Falco runtime, Cosign, service mesh" },
+    { name: "Infrastructure as Code Seguro: Terraform y Ansible", desc: "IaC scanning (Checkov/tfsec), Sentinel policy-as-code, drift detection, hardening roles" },
+    { name: "Cloud Computing y Seguridad en Nube: AWS, Azure y GCP", desc: "IAM least privilege, VPC, GuardDuty, Security Hub, Zero Trust Architecture, CSPM (Wiz)" },
+    { name: "Threat Modeling, MITRE ATT&CK y OWASP Top 10", desc: "STRIDE, PASTA, árboles de ataque, ATT&CK Enterprise/Cloud, Cyber Kill Chain, CTI" },
+    { name: "Seguridad en Kubernetes, Containers y Software Supply Chain", desc: "CIS Benchmark, SLSA Framework, SBOM (Syft/Grype), casos SolarWinds/Log4Shell/XZ" },
+    { name: "Monitoreo, Observabilidad y SIEM", desc: "ELK Stack, Prometheus, Grafana, OpenTelemetry, Elastic SIEM, SOC, reglas de correlación" },
+    { name: "Respuesta a Incidentes, Forense Digital y Continuidad de Negocio", desc: "Ciclo IR, SOAR (Splunk SOAR), forense Linux/Cloud (Volatility/CloudTrail), BCP/DRP" },
+    { name: "DevSecOps con IA: Automatización Inteligente de Seguridad", desc: "AI-powered SAST (Copilot/CodeGuru), UEBA con ML, seguridad de pipelines de IA/LLMs" },
+    { name: "Compliance: LGPD, ISO 27001, NIST CSF 2.0 y SOC 2", desc: "LGPD/ANPD, ISO 27001:2022 ISMS, NIST Govern-Identify-Protect-Detect-Respond, PCI-DSS 4.0" },
+    { name: "Gestión de Seguridad y Liderazgo Técnico (Mentalidad CISO)", desc: "Security champions, KPIs DevSecOps, presupuesto de seguridad para board ejecutivo" },
+    { name: "Gobernanza de TI: COBIT 2019, ITIL 4 y Gestión de Riesgos", desc: "Objetivos de control COBIT 2019, value chain ITIL 4, ISO 31000, GRC, auditoría interna" },
+    { name: "Emprendimiento en Ciberseguridad y Managed Security Services", desc: "Mercado brasileño de ciberseguridad, MSSP, SaaS de seguridad, aceleradoras" },
+    { name: "Trabajo de Conclusión de Curso — Disertación + Defensa", desc: "Implementación real DevSecOps o mejora mensurable de pipeline; defensa pública online con demostración técnica" }
+  ],
+  tr: [
+    { name: "DevOps Temelleri, Çevik Kültür, Lean ve Güvenli SDLC", desc: "CAMS, shift-left güvenlik, Scrum/Kanban, DORA metrikleri, CMU SEI PIM genel bakış" },
+    { name: "Git ile İleri Versiyon Kontrolü, GitFlow ve Dallanma Stratejileri", desc: "Git iç yapısı, Trunk-Based Dev, GitOps, güvenlik hook'ları, Gitleaks, GPG imzalama" },
+    { name: "Güvenlik Temelleri: CIA Üçlüsü, OWASP Top 10 ve Zafiyet Analizi", desc: "CVE/CVSS, TLS 1.3 kriptografi, HashiCorp Vault, temel pentest, tehdit istihbaratı" },
+    { name: "Linux, Shell Scripting ve Sunucu Altyapısı", desc: "Linux yönetimi, ileri Bash, TCP/IP, CIS Benchmarks sertleştirme, güvenli SSH" },
+    { name: "Güvenli Programlama: En İyi Uygulamalar ve Güvenlik Kod İncelemesi", desc: "OWASP Güvenli Kodlama, SQLi/XSS/CSRF önleme, Semgrep, Bandit, temel SCA" },
+    { name: "Güvenli CI/CD Pipeline'ları: Jenkins, GitHub Actions ve GitLab CI", desc: "Güvenlik kapıları, OIDC token'lar, ArgoCD GitOps, blue-green/canary dağıtımlar, sırlar" },
+    { name: "SAST, DAST ve SCA: Pipeline'larda Otomatik Güvenlik Testleri", desc: "SonarQube, Semgrep, CodeQL, OWASP ZAP, Snyk, Trivy, Nuclei, OWASP API Top 10" },
+    { name: "Docker ile Konteynerizasyon ve Kubernetes ile Güvenli Orkestrasyon", desc: "Çok aşamalı build'ler, non-root, Trivy, OPA/Gatekeeper, Falco runtime, Cosign, service mesh" },
+    { name: "Güvenli Kod Olarak Altyapı: Terraform ve Ansible", desc: "IaC tarama (Checkov/tfsec), Sentinel policy-as-code, drift algılama, sertleştirme rolleri" },
+    { name: "Bulut Bilişim ve Bulut Güvenliği: AWS, Azure ve GCP", desc: "IAM en az yetki, VPC, GuardDuty, Security Hub, Sıfır Güven Mimarisi, CSPM (Wiz)" },
+    { name: "Tehdit Modelleme, MITRE ATT&CK ve OWASP Top 10", desc: "STRIDE, PASTA, saldırı ağaçları, ATT&CK Enterprise/Cloud, Cyber Kill Chain, CTI" },
+    { name: "Kubernetes Güvenliği, Konteynerler ve Yazılım Tedarik Zinciri", desc: "CIS Benchmark, SLSA Framework, SBOM (Syft/Grype), SolarWinds/Log4Shell/XZ vakaları" },
+    { name: "İzleme, Gözlemlenebilirlik ve SIEM", desc: "ELK Stack, Prometheus, Grafana, OpenTelemetry, Elastic SIEM, SOC, korelasyon kuralları" },
+    { name: "Olay Müdahale, Dijital Adli Bilişim ve İş Sürekliliği", desc: "IR döngüsü, SOAR (Splunk SOAR), Linux/Cloud adli analiz (Volatility/CloudTrail), BCP/DRP" },
+    { name: "YZ ile DevSecOps: Akıllı Güvenlik Otomasyonu", desc: "YZ destekli SAST (Copilot/CodeGuru), ML ile UEBA, YZ/LLM pipeline güvenliği" },
+    { name: "Uyumluluk: LGPD, ISO 27001, NIST CSF 2.0 ve SOC 2", desc: "LGPD/ANPD, ISO 27001:2022 ISMS, NIST Govern-Identify-Protect-Detect-Respond, PCI-DSS 4.0" },
+    { name: "Güvenlik Yönetimi ve Teknik Liderlik (CISO Zihniyeti)", desc: "Güvenlik şampiyonları, DevSecOps KPI'ları, yönetim kurulu için güvenlik bütçesi" },
+    { name: "BT Yönetişimi: COBIT 2019, ITIL 4 ve Risk Yönetimi", desc: "COBIT 2019 kontrol hedefleri, ITIL 4 değer zinciri, ISO 31000, GRC, iç denetim" },
+    { name: "Siber Güvenlik Girişimciliği ve Yönetilen Güvenlik Hizmetleri", desc: "Brezilya siber güvenlik pazarı, MSSP, güvenlik SaaS, hızlandırıcılar" },
+    { name: "Bitirme Çalışması — Tez + Savunma", desc: "Gerçek DevSecOps uygulaması veya ölçülebilir pipeline iyileştirmesi; teknik demonstrasyonlu halka açık online savunma" }
+  ]
+};
+
+// Semester headers
+const semesterHeaders = {
+  ai: {
+    en: [
+      { title: "Scientific Foundations, ML and Deep Learning", sub: "Mathematical foundation, programming, classic ML, IoT and introductory deep learning" },
+      { title: "Advanced IoT, NLP, LLMs and Applied AI", sub: "Embedded systems, IoT networks, edge computing, NLP, generative AI and real applications" },
+      { title: "Ethics, MLOps, Strategy and Thesis", sub: "LGPD, MLOps, product management, entrepreneurship, regulation and dissertation" }
+    ],
+    es: [
+      { title: "Fundamentos Científicos, ML y Deep Learning", sub: "Base matemática, programación, ML clásico, IoT y deep learning introductorio" },
+      { title: "IoT Avanzado, PLN, LLMs e IA Aplicada", sub: "Sistemas embebidos, redes IoT, edge computing, PLN, IA generativa y aplicaciones reales" },
+      { title: "Ética, MLOps, Estrategia y Tesis", sub: "LGPD, MLOps, gestión de productos, emprendimiento, regulación y disertación" }
+    ],
+    tr: [
+      { title: "Bilimsel Temeller, ML ve Derin Öğrenme", sub: "Matematik temeli, programlama, klasik ML, IoT ve giriş seviyesi derin öğrenme" },
+      { title: "İleri IoT, NLP, LLM'ler ve Uygulamalı YZ", sub: "Gömülü sistemler, IoT ağları, edge computing, NLP, üretken YZ ve gerçek uygulamalar" },
+      { title: "Etik, MLOps, Strateji ve Tez", sub: "LGPD, MLOps, ürün yönetimi, girişimcilik, düzenleme ve tez" }
+    ]
+  },
+  dso: {
+    en: [
+      { title: "Dev Foundations, Security and CI/CD", sub: "DevOps, Git, information security, Linux, secure programming and pipelines" },
+      { title: "Containers, Cloud Security, Threat Modeling and SIEM", sub: "Kubernetes, IaC, cloud security, threat modeling, supply chain and monitoring" },
+      { title: "Compliance, Leadership, Governance and Thesis", sub: "LGPD, ISO 27001, DevSecOps with AI, CISO leadership, COBIT/ITIL and dissertation" }
+    ],
+    es: [
+      { title: "Fundamentos Dev, Seguridad y CI/CD", sub: "DevOps, Git, seguridad de información, Linux, programación segura y pipelines" },
+      { title: "Containers, Cloud Security, Threat Modeling y SIEM", sub: "Kubernetes, IaC, cloud security, threat modeling, supply chain y monitoreo" },
+      { title: "Compliance, Liderazgo, Gobernanza y Tesis", sub: "LGPD, ISO 27001, DevSecOps con IA, liderazgo CISO, COBIT/ITIL y disertación" }
+    ],
+    tr: [
+      { title: "Dev Temelleri, Güvenlik ve CI/CD", sub: "DevOps, Git, bilgi güvenliği, Linux, güvenli programlama ve pipeline'lar" },
+      { title: "Konteynerler, Bulut Güvenliği, Tehdit Modelleme ve SIEM", sub: "Kubernetes, IaC, bulut güvenliği, tehdit modelleme, tedarik zinciri ve izleme" },
+      { title: "Uyumluluk, Liderlik, Yönetişim ve Tez", sub: "LGPD, ISO 27001, YZ ile DevSecOps, CISO liderliği, COBIT/ITIL ve tez" }
+    ]
+  }
+};
+
+// Function to translate disciplines
+function translateDisciplines(lang) {
+  if (lang === 'pt') return; // Portuguese is the original, no translation needed
+  
+  // Translate AI disciplines (panels 1 and 6)
+  const aiDisciplines = disciplinesAI[lang];
+  if (aiDisciplines) {
+    // Panel 1 - Program overview with accordions
+    const panel1 = document.getElementById('panel-1');
+    if (panel1) {
+      const rows = panel1.querySelectorAll('.tr');
+      rows.forEach((row, idx) => {
+        if (aiDisciplines[idx]) {
+          const tn = row.querySelector('.tn');
+          const tsub = row.querySelector('.tsub');
+          if (tn) {
+            const originalText = tn.childNodes[0];
+            if (originalText && originalText.nodeType === 3) {
+              originalText.textContent = aiDisciplines[idx].name;
+            } else {
+              tn.firstChild.textContent = aiDisciplines[idx].name;
+            }
+          }
+          if (tsub) tsub.textContent = aiDisciplines[idx].desc;
+        }
+      });
+      
+      // Translate semester headers
+      const semHeaders = semesterHeaders.ai[lang];
+      if (semHeaders) {
+        const accordions = panel1.querySelectorAll('.ab');
+        accordions.forEach((acc, idx) => {
+          if (semHeaders[idx]) {
+            const atit = acc.querySelector('.atit');
+            const asub = acc.querySelector('.asub');
+            if (atit) atit.textContent = semHeaders[idx].title;
+            if (asub) asub.textContent = semHeaders[idx].sub;
+          }
+        });
+      }
+    }
+    
+    // Panel 6 - Ementa AI
+    const panel6 = document.getElementById('panel-6');
+    if (panel6) {
+      const ecards = panel6.querySelectorAll('.ecard');
+      ecards.forEach((card, idx) => {
+        if (aiDisciplines[idx]) {
+          const ecardName = card.querySelector('.ecard-name');
+          const ecardEmenta = card.querySelector('.ecard-ementa');
+          if (ecardName) ecardName.textContent = aiDisciplines[idx].name;
+          // Keep the ementa in Portuguese as it's detailed content
+        }
+      });
+    }
+  }
+  
+  // Translate DSO disciplines (panels 2 and 7)
+  const dsoDisciplines = disciplinesDSO[lang];
+  if (dsoDisciplines) {
+    // Panel 2 - Program overview with accordions
+    const panel2 = document.getElementById('panel-2');
+    if (panel2) {
+      const rows = panel2.querySelectorAll('.tr');
+      rows.forEach((row, idx) => {
+        if (dsoDisciplines[idx]) {
+          const tn = row.querySelector('.tn');
+          const tsub = row.querySelector('.tsub');
+          if (tn) {
+            const originalText = tn.childNodes[0];
+            if (originalText && originalText.nodeType === 3) {
+              originalText.textContent = dsoDisciplines[idx].name;
+            } else {
+              tn.firstChild.textContent = dsoDisciplines[idx].name;
+            }
+          }
+          if (tsub) tsub.textContent = dsoDisciplines[idx].desc;
+        }
+      });
+      
+      // Translate semester headers
+      const semHeaders = semesterHeaders.dso[lang];
+      if (semHeaders) {
+        const accordions = panel2.querySelectorAll('.ab');
+        accordions.forEach((acc, idx) => {
+          if (semHeaders[idx]) {
+            const atit = acc.querySelector('.atit');
+            const asub = acc.querySelector('.asub');
+            if (atit) atit.textContent = semHeaders[idx].title;
+            if (asub) asub.textContent = semHeaders[idx].sub;
+          }
+        });
+      }
+    }
+    
+    // Panel 7 - Ementa DSO
+    const panel7 = document.getElementById('panel-7');
+    if (panel7) {
+      const ecards = panel7.querySelectorAll('.ecard');
+      ecards.forEach((card, idx) => {
+        if (dsoDisciplines[idx]) {
+          const ecardName = card.querySelector('.ecard-name');
+          if (ecardName) ecardName.textContent = dsoDisciplines[idx].name;
+        }
+      });
+    }
+  }
+}
+
+
+
+
 // Current language
 let currentLang = localStorage.getItem('vccu-lang') || 'en';
 
@@ -2422,6 +2712,9 @@ function applyTranslations(lang) {
     });
   }
   
+  // Translate disciplines
+  translateDisciplines(lang);
+
   // Close dropdown
   const langDropdown = document.getElementById('lang-dropdown');
   if (langDropdown) langDropdown.classList.remove('open');
