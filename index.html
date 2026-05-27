@@ -1841,6 +1841,16 @@ const translations = {
       "Minimum participation in 3 seminars with specialists",
       "Completion of 380h within maximum 24 months"
     ],
+    // Pills (badges)
+    pillDuration: "📅 18 months · 3 semesters",
+    pillHours: "⏱ 380 class hours",
+    pillCourses: "📚 20 courses",
+    pillOnline: "🟢 100% Online · Live",
+    pillStandard: "🏆 International Standard",
+    pillAligned: "🏆 Aligned with CMU SEI PIM",
+    // Completion section titles
+    completionTitleAI: "📋 Completion Requirements — MBA in AI & IoT",
+    completionTitleDSO: "📋 Completion Requirements — MBA in DevSecOps Engineering",
     evalSystemTitle: "Evaluation System — Both MBA Programs",
     evalSystemDesc: "Continuous and competency-based evaluation model, balancing theory, practice and final project. Applied to both VCCU MBA programs in 100% Online/Live format.",
     evalLabs: "Practical Labs",
@@ -1951,6 +1961,16 @@ const translations = {
       "Participação mínima em 3 seminários com especialistas",
       "Integralização de 380h no prazo máximo de 24 meses"
     ],
+    // Pills (badges)
+    pillDuration: "📅 18 meses · 3 semestres",
+    pillHours: "⏱ 380 horas/aula",
+    pillCourses: "📚 20 disciplinas",
+    pillOnline: "🟢 100% Online · Ao Vivo",
+    pillStandard: "🏆 Padrão Internacional",
+    pillAligned: "🏆 Alinhado ao CMU SEI PIM",
+    // Completion section titles
+    completionTitleAI: "📋 Requisitos de Conclusão — MBA em IA & IoT",
+    completionTitleDSO: "📋 Requisitos de Conclusão — MBA em Engenharia DevSecOps",
     evalSystemTitle: "Sistema de Avaliação — Ambos os Programas MBA",
     evalSystemDesc: "Modelo de avaliação contínua e por competências, equilibrando teoria, prática e projeto de conclusão. Aplicado a ambos os programas MBA da VCCU no formato 100% Online/Live.",
     evalLabs: "Laboratórios Práticos",
@@ -2061,6 +2081,16 @@ const translations = {
       "Participación mínima en 3 seminarios con especialistas",
       "Completar 380h en plazo máximo de 24 meses"
     ],
+    // Pills (badges)
+    pillDuration: "📅 18 meses · 3 semestres",
+    pillHours: "⏱ 380 horas/clase",
+    pillCourses: "📚 20 asignaturas",
+    pillOnline: "🟢 100% Online · En Vivo",
+    pillStandard: "🏆 Estándar Internacional",
+    pillAligned: "🏆 Alineado con CMU SEI PIM",
+    // Completion section titles
+    completionTitleAI: "📋 Requisitos de Conclusión — MBA en IA e IoT",
+    completionTitleDSO: "📋 Requisitos de Conclusión — MBA en Ingeniería DevSecOps",
     evalSystemTitle: "Sistema de Evaluación — Ambos Programas MBA",
     evalSystemDesc: "Modelo de evaluación continua y por competencias, equilibrando teoría, práctica y proyecto final. Aplicado a ambos programas MBA de VCCU en formato 100% Online/En Vivo.",
     evalLabs: "Laboratorios Prácticos",
@@ -2171,6 +2201,16 @@ const translations = {
       "Uzmanlarla minimum 3 seminere katılım",
       "Maksimum 24 ay içinde 380 saati tamamlama"
     ],
+    // Pills (badges)
+    pillDuration: "📅 18 ay · 3 dönem",
+    pillHours: "⏱ 380 ders saati",
+    pillCourses: "📚 20 ders",
+    pillOnline: "🟢 100% Online · Canlı",
+    pillStandard: "🏆 Uluslararası Standart",
+    pillAligned: "🏆 CMU SEI PIM ile Uyumlu",
+    // Completion section titles
+    completionTitleAI: "📋 Mezuniyet Gereksinimleri — YZ ve IoT MBA",
+    completionTitleDSO: "📋 Mezuniyet Gereksinimleri — DevSecOps Mühendisliği MBA",
     evalSystemTitle: "Değerlendirme Sistemi — Her İki MBA Programı",
     evalSystemDesc: "Teori, pratik ve bitirme projesini dengeleyen sürekli ve yetkinlik temelli değerlendirme modeli. VCCU'nun her iki MBA programına 100% Online/Canlı formatında uygulanır.",
     evalLabs: "Pratik Laboratuvarlar",
@@ -2618,6 +2658,29 @@ function applyTranslations(lang) {
       if (progEy) progEy.textContent = t.programType;
       if (progTi) progTi.textContent = t.programAITitle;
       if (progTg) progTg.textContent = t.aiProgramDesc;
+      
+      // Translate pills/badges
+      const pills = progHdr.querySelectorAll('.prog-pills .pp');
+      if (pills.length >= 5) {
+        pills[0].textContent = t.pillDuration;
+        pills[1].textContent = t.pillHours;
+        pills[2].textContent = t.pillCourses;
+        pills[3].textContent = t.pillOnline;
+        pills[4].textContent = t.pillStandard;
+      }
+    }
+    
+    // Translate completion requirements
+    const completion = panel1.querySelector('.completion');
+    if (completion) {
+      const ct2 = completion.querySelector('.ct2');
+      if (ct2) ct2.textContent = t.completionTitleAI;
+      const items = completion.querySelectorAll('.ci2');
+      if (items.length >= 6 && t.completionItems) {
+        t.completionItems.forEach((text, i) => {
+          if (items[i]) items[i].textContent = '✓ ' + text;
+        });
+      }
     }
   }
   
@@ -2632,6 +2695,29 @@ function applyTranslations(lang) {
       if (progEy) progEy.textContent = t.programType;
       if (progTi) progTi.textContent = t.programDSOTitle;
       if (progTg) progTg.textContent = t.dsoProgramDesc;
+      
+      // Translate pills/badges
+      const pills = progHdr.querySelectorAll('.prog-pills .pp');
+      if (pills.length >= 5) {
+        pills[0].textContent = t.pillDuration;
+        pills[1].textContent = t.pillHours;
+        pills[2].textContent = t.pillCourses;
+        pills[3].textContent = t.pillOnline;
+        pills[4].textContent = t.pillAligned; // CMU SEI PIM for DevSecOps
+      }
+    }
+    
+    // Translate completion requirements
+    const completion = panel2.querySelector('.completion');
+    if (completion) {
+      const ct2 = completion.querySelector('.ct2');
+      if (ct2) ct2.textContent = t.completionTitleDSO;
+      const items = completion.querySelectorAll('.ci2');
+      if (items.length >= 6 && t.completionItems) {
+        t.completionItems.forEach((text, i) => {
+          if (items[i]) items[i].textContent = '✓ ' + text;
+        });
+      }
     }
   }
   
@@ -2681,6 +2767,19 @@ function applyTranslations(lang) {
       if (ebTitle) ebTitle.textContent = t.programAITitle;
       if (ebSub && t.ementaSub) ebSub.textContent = '20 ' + t.ementaSub;
     }
+    
+    // Translate ecard labels
+    const labels = panel6.querySelectorAll('.ecard-label');
+    labels.forEach(label => {
+      const text = label.textContent;
+      if (text.includes('Conteúdo') || text.includes('Program Content') || text.includes('Contenido') || text.includes('Program İçeriği')) {
+        label.innerHTML = '📌 ' + t.programContent;
+      } else if (text.includes('Ferramentas') || text.includes('Tools') || text.includes('Herramientas') || text.includes('Araçlar')) {
+        label.innerHTML = '🛠️ ' + t.tools;
+      } else if (text.includes('Referências') || text.includes('References') || text.includes('Referencias') || text.includes('Referanslar')) {
+        label.innerHTML = '📖 ' + t.references;
+      }
+    });
   }
   
   // ===== PANEL 7 - EMENTA DSO =====
@@ -2695,6 +2794,19 @@ function applyTranslations(lang) {
       if (ebTitle) ebTitle.textContent = t.programDSOTitle;
       if (ebSub && t.ementaSub) ebSub.textContent = '20 ' + t.ementaSub;
     }
+    
+    // Translate ecard labels
+    const labels = panel7.querySelectorAll('.ecard-label');
+    labels.forEach(label => {
+      const text = label.textContent;
+      if (text.includes('Conteúdo') || text.includes('Program Content') || text.includes('Contenido') || text.includes('Program İçeriği')) {
+        label.innerHTML = '📌 ' + t.programContent;
+      } else if (text.includes('Ferramentas') || text.includes('Tools') || text.includes('Herramientas') || text.includes('Araçlar')) {
+        label.innerHTML = '🛠️ ' + t.tools;
+      } else if (text.includes('Referências') || text.includes('References') || text.includes('Referencias') || text.includes('Referanslar')) {
+        label.innerHTML = '📖 ' + t.references;
+      }
+    });
   }
 
 
