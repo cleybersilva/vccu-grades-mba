@@ -1810,8 +1810,8 @@ const translations = {
     facultyTitle: "Faculty",
     facultyDesc: "Professors with experience in industry and academia",
     // Panel 5 - References
-    refsTitle: "Academic References and Benchmarking",
-    refsDesc: "Curriculum designed from comparative analysis of the main reference universities",
+    refsTitle: "Reference Universities and Institutions",
+    refsIntro: "The curricula were developed after systematic analysis of programs from the institutions below, recognized globally as leaders in technology and security.",
     // Footer
     footerRights: "All rights reserved.",
     footerDisclaimer: "Document prepared for institutional academic purposes. Referenced institutions do not directly endorse this program.",
@@ -1830,6 +1830,17 @@ const translations = {
     prerequisites: "Prerequisites",
     ementaLabel: "📋 COURSE SYLLABI",
     ementaSub: "courses · semesters · hours · 100% Online/Live — Syllabus, program content, tools and references for each course.",
+    ementaPills: ["Semester 1 → 6 courses", "Semester 2 → 8 courses", "Semester 3 → 6 courses"],
+    ementaSemAI: [
+      { tag: "Semester 1", title: "Scientific Foundations, ML and Deep Learning" },
+      { tag: "Semester 2", title: "Advanced IoT, NLP, LLMs and Applied AI" },
+      { tag: "Semester 3", title: "Ethics, MLOps, Strategy and Thesis" }
+    ],
+    ementaSemDSO: [
+      { tag: "Semester 1", title: "Dev Foundations, Security and CI/CD" },
+      { tag: "Semester 2", title: "Containers, Cloud Security, Threat Modeling and SIEM" },
+      { tag: "Semester 3", title: "Compliance, Leadership, Governance and Thesis" }
+    ],
     semesterLabel: "Semester",
     months: "months",
     completionTitle: "📋 Completion Requirements",
@@ -1975,8 +1986,8 @@ const translations = {
     evalFinalDesc: "TCC com defesa ao vivo perante banca",
     facultyTitle: "Corpo Docente",
     facultyDesc: "Professores com experiência em indústria e academia",
-    refsTitle: "Referências Acadêmicas e Benchmarking",
-    refsDesc: "Grade elaborada a partir de análise comparativa das principais universidades de referência",
+    refsTitle: "Universidades e Instituições de Referência",
+    refsIntro: "As grades curriculares foram elaboradas após análise sistemática dos programas das instituições abaixo, reconhecidas globalmente como líderes em tecnologia e segurança.",
     footerRights: "Todos os direitos reservados.",
     footerDisclaimer: "Documento elaborado para fins acadêmicos institucionais. As instituições referenciadas não endossam diretamente este programa.",
     footerLinks: ["Grades Curriculares MBA", "MBA em IA & IoT · MBA em DevSecOps", "100% Online · Aulas ao Vivo", "12 Universidades de Referência"],
@@ -1993,6 +2004,17 @@ const translations = {
     prerequisites: "Pré-requisitos",
     ementaLabel: "📋 EMENTAS DAS DISCIPLINAS",
     ementaSub: "disciplinas · semestres · horas · 100% Online/Live — Ementa, conteúdo programático, ferramentas e referências de cada disciplina.",
+    ementaPills: ["Semestre 1 → 6 disc.", "Semestre 2 → 8 disc.", "Semestre 3 → 6 disc."],
+    ementaSemAI: [
+      { tag: "Semestre 1", title: "Fundamentos Científicos, ML e Deep Learning" },
+      { tag: "Semestre 2", title: "IoT Avançado, PLN, LLMs e IA Aplicada" },
+      { tag: "Semestre 3", title: "Ética, MLOps, Estratégia e TCC" }
+    ],
+    ementaSemDSO: [
+      { tag: "Semestre 1", title: "Fundamentos de Dev, Segurança e CI/CD" },
+      { tag: "Semestre 2", title: "Containers, Cloud Security, Threat Modeling e SIEM" },
+      { tag: "Semestre 3", title: "Compliance, Liderança, Governança e TCC" }
+    ],
     semesterLabel: "Semestre",
     months: "meses",
     completionTitle: "📋 Requisitos de Conclusão",
@@ -2138,8 +2160,8 @@ const translations = {
     evalFinalDesc: "Tesis con defensa en vivo ante tribunal",
     facultyTitle: "Cuerpo Docente",
     facultyDesc: "Profesores con experiencia en industria y academia",
-    refsTitle: "Referencias Académicas y Benchmarking",
-    refsDesc: "Plan elaborado a partir del análisis comparativo de las principales universidades de referencia",
+    refsTitle: "Universidades e Instituciones de Referencia",
+    refsIntro: "Los planes curriculares fueron elaborados tras análisis sistemático de los programas de las instituciones abajo, reconocidas globalmente como líderes en tecnología y seguridad.",
     footerRights: "Todos los derechos reservados.",
     footerDisclaimer: "Documento elaborado con fines académicos institucionales. Las instituciones referenciadas no respaldan directamente este programa.",
     footerLinks: ["Planes de Estudio MBA", "MBA en IA e IoT · MBA en DevSecOps", "100% Online · Clases en Vivo", "12 Universidades de Referencia"],
@@ -2156,6 +2178,17 @@ const translations = {
     prerequisites: "Prerrequisitos",
     ementaLabel: "📋 TEMARIOS DE ASIGNATURAS",
     ementaSub: "asignaturas · semestres · horas · 100% Online/En Vivo — Temario, contenido programático, herramientas y referencias de cada asignatura.",
+    ementaPills: ["Semestre 1 → 6 asig.", "Semestre 2 → 8 asig.", "Semestre 3 → 6 asig."],
+    ementaSemAI: [
+      { tag: "Semestre 1", title: "Fundamentos Científicos, ML y Deep Learning" },
+      { tag: "Semestre 2", title: "IoT Avanzado, PLN, LLMs e IA Aplicada" },
+      { tag: "Semestre 3", title: "Ética, MLOps, Estrategia y Tesis" }
+    ],
+    ementaSemDSO: [
+      { tag: "Semestre 1", title: "Fundamentos Dev, Seguridad y CI/CD" },
+      { tag: "Semestre 2", title: "Containers, Cloud Security, Threat Modeling y SIEM" },
+      { tag: "Semestre 3", title: "Compliance, Liderazgo, Gobernanza y Tesis" }
+    ],
     semesterLabel: "Semestre",
     months: "meses",
     completionTitle: "📋 Requisitos de Conclusión",
@@ -2301,8 +2334,8 @@ const translations = {
     evalFinalDesc: "Jüri önünde canlı savunmalı tez",
     facultyTitle: "Akademik Kadro",
     facultyDesc: "Endüstri ve akademi deneyimli öğretim üyeleri",
-    refsTitle: "Akademik Referanslar ve Kıyaslama",
-    refsDesc: "Önde gelen referans üniversitelerin karşılaştırmalı analizinden hazırlanan müfredat",
+    refsTitle: "Referans Üniversiteler ve Kurumlar",
+    refsIntro: "Müfredatlar, teknoloji ve güvenlikte küresel liderler olarak tanınan aşağıdaki kurumların programlarının sistematik analizinden sonra geliştirilmiştir.",
     footerRights: "Tüm hakları saklıdır.",
     footerDisclaimer: "Bu belge kurumsal akademik amaçlarla hazırlanmıştır. Referans verilen kurumlar bu programı doğrudan desteklememektedir.",
     footerLinks: ["MBA Müfredatı", "YZ ve IoT MBA · DevSecOps MBA", "100% Online · Canlı Dersler", "12 Referans Üniversite"],
@@ -2319,6 +2352,17 @@ const translations = {
     prerequisites: "Önkoşullar",
     ementaLabel: "📋 DERS MÜFREDATı",
     ementaSub: "ders · dönem · saat · 100% Online/Canlı — Her dersin müfredatı, program içeriği, araçlar ve referanslar.",
+    ementaPills: ["Dönem 1 → 6 ders", "Dönem 2 → 8 ders", "Dönem 3 → 6 ders"],
+    ementaSemAI: [
+      { tag: "Dönem 1", title: "Bilimsel Temeller, ML ve Derin Öğrenme" },
+      { tag: "Dönem 2", title: "İleri IoT, NLP, LLM'ler ve Uygulamalı YZ" },
+      { tag: "Dönem 3", title: "Etik, MLOps, Strateji ve Tez" }
+    ],
+    ementaSemDSO: [
+      { tag: "Dönem 1", title: "Dev Temelleri, Güvenlik ve CI/CD" },
+      { tag: "Dönem 2", title: "Konteynerler, Bulut Güvenliği, Tehdit Modelleme ve SIEM" },
+      { tag: "Dönem 3", title: "Uyumluluk, Liderlik, Yönetişim ve Tez" }
+    ],
     semesterLabel: "Dönem",
     months: "ay",
     completionTitle: "📋 Mezuniyet Gereksinimleri",
@@ -3001,6 +3045,9 @@ function applyTranslations(lang) {
   if (panel5) {
     const stitle = panel5.querySelector('.stitle');
     if (stitle) stitle.textContent = t.refsTitle;
+    
+    const desc = panel5.querySelector('p');
+    if (desc && t.refsIntro) desc.textContent = t.refsIntro;
   }
   
   
@@ -3015,6 +3062,27 @@ function applyTranslations(lang) {
       if (ebLabel) ebLabel.textContent = t.ementaLabel || t.tabEmentaAI;
       if (ebTitle) ebTitle.textContent = t.programAITitle;
       if (ebSub && t.ementaSub) ebSub.textContent = '20 ' + t.ementaSub;
+      
+      // Translate semester pills
+      if (t.ementaPills) {
+        const pills = banner.querySelectorAll('.eb-pills .pp');
+        t.ementaPills.forEach((text, i) => {
+          if (pills[i]) pills[i].textContent = text;
+        });
+      }
+    }
+    
+    // Translate semester headers
+    if (t.ementaSemAI) {
+      const semHdrs = panel6.querySelectorAll('.esem-hdr');
+      semHdrs.forEach((hdr, i) => {
+        if (t.ementaSemAI[i]) {
+          const tag = hdr.querySelector('.esem-tag');
+          const title = hdr.querySelector('.esem-title');
+          if (tag) tag.textContent = t.ementaSemAI[i].tag;
+          if (title) title.textContent = t.ementaSemAI[i].title;
+        }
+      });
     }
     
     // Translate ecard labels
@@ -3042,6 +3110,27 @@ function applyTranslations(lang) {
       if (ebLabel) ebLabel.textContent = t.ementaLabel || t.tabEmentaDSO;
       if (ebTitle) ebTitle.textContent = t.programDSOTitle;
       if (ebSub && t.ementaSub) ebSub.textContent = '20 ' + t.ementaSub;
+      
+      // Translate semester pills
+      if (t.ementaPills) {
+        const pills = banner.querySelectorAll('.eb-pills .pp');
+        t.ementaPills.forEach((text, i) => {
+          if (pills[i]) pills[i].textContent = text;
+        });
+      }
+    }
+    
+    // Translate semester headers
+    if (t.ementaSemDSO) {
+      const semHdrs = panel7.querySelectorAll('.esem-hdr');
+      semHdrs.forEach((hdr, i) => {
+        if (t.ementaSemDSO[i]) {
+          const tag = hdr.querySelector('.esem-tag');
+          const title = hdr.querySelector('.esem-title');
+          if (tag) tag.textContent = t.ementaSemDSO[i].tag;
+          if (title) title.textContent = t.ementaSemDSO[i].title;
+        }
+      });
     }
     
     // Translate ecard labels
